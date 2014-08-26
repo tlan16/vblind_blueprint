@@ -22,7 +22,7 @@ function varargout = vblindGUI(varargin)
 
 % Edit the above text to modify the response to help vblindGUI
 
-% Last Modified by GUIDE v2.5 24-Feb-2014 21:44:34
+% Last Modified by GUIDE v2.5 26-Aug-2014 15:19:27
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -305,14 +305,22 @@ function pushbutton1_Callback(hObject, eventdata, handles)
 % hObject    handle to pushbutton1 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-customer = get(handles.edit1,'String');
+if isempty(get(handles.edit1,'String'))
+    customer = 'Default Customer';
+else
+    customer = get(handles.edit1,'String');
+end
 fixpoint = get(handles.edit2,'String');
 divider = str2double(get(handles.edit3,'String'));
 width = str2double(get(handles.edit4,'String'));
 drop = str2double(get(handles.edit5,'String'));
 details = get(handles.edit6,'String');
 panels = str2num(get(handles.edit7,'String'));
-location = get(handles.edit8,'String');
+if isempty(get(handles.edit8,'String'))
+    location = 'Default location';
+else
+    location = get(handles.edit8,'String');
+end
 frame = yestoone(get(handles.edit9,'String'));
 note = get(handles.edit10,'String');
 copy = str2num(get(handles.edit11,'String'));
@@ -365,3 +373,12 @@ function edit12_CreateFcn(hObject, eventdata, handles)
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
+
+
+% --- Executes on button press in checkbox1.
+function checkbox1_Callback(hObject, eventdata, handles)
+% hObject    handle to checkbox1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of checkbox1

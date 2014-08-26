@@ -1,0 +1,25 @@
+ant:
+<ant>
+  <mkdir dir="C:\Users\Frank-Desktop\Documents\vblind_blueprint\vBlind_bluePrint\for_redistribution" />
+  <mkdir dir="C:\Users\Frank-Desktop\Documents\vblind_blueprint\vBlind_bluePrint\for_testing" />
+</ant>
+mcc -C -o vBlind_bluePrint -W WinMain:vBlind_bluePrint -T link:exe -d C:\Users\Frank-Desktop\Documents\vblind_blueprint\vBlind_bluePrint\for_testing -v C:\Users\Frank-Desktop\Documents\vblind_blueprint\vblindGUI.m 
+Compiler version: 5.1 (R2014a)
+Dependency analysis by REQUIREMENTS.
+[Warning: Adding path "C:\Users\Frank-Desktop\Documents\vblind_blueprint" to
+Compiler path instance.] 
+Parsing file "C:\Users\Frank-Desktop\Documents\vblind_blueprint\vblindGUI.m"
+	(Referenced from: "Compiler Command Line").
+Parsing file "D:\Program Files\MATLAB\R2014a\toolbox\compiler\deploy\deployprint.m"
+	(Referenced from: "Compiler Command Line").
+Parsing file "D:\Program Files\MATLAB\R2014a\toolbox\compiler\deploy\printdlg.m"
+	(Referenced from: "Compiler Command Line").
+Deleting 0 temporary MEX authorization files.
+Generating file "C:\Users\Frank-Desktop\Documents\vblind_blueprint\vBlind_bluePrint\for_testing\readme.txt".
+Packaging...
+Adding custom icon D:\Program Files\MATLAB\R2014a\toolbox\compiler\Resources\default_icon.ico to C:\Users\Frank-Desktop\Documents\vblind_blueprint\vBlind_bluePrint\for_testing\vBlind_bluePrint.exe.
+Attempting to embed the CTF archive into the application C:\Users\Frank-Desktop\Documents\vblind_blueprint\vBlind_bluePrint\for_testing\vBlind_bluePrint.exe.
+Finished embedding CTF archive. Deleting the external CTF archive.
+Creating the bundle...
+Web based installer created at C:\Users\Frank-Desktop\Documents\vblind_blueprint\vBlind_bluePrint\for_redistribution\MyAppInstaller_web.exe.
+Packaging complete.

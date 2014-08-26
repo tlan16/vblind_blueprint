@@ -18,11 +18,11 @@ function [] = feeder(customer,fixpoint,divider,width,drop,details,panels,locatio
 % location='12 address rd, clayton';frame=0;note='here is a note';
 
 if frame==1
-    heightoriginal = drop - 56;
-    individualwidthoriginal = ones(1,panels) * (width-52-2*(panels+1))/panels;
+    heightoriginal = drop - 58;
+    individualwidthoriginal = ones(1,panels) * (width-58-3*2*(panels-1))/panels;
 else
-    heightoriginal = drop - 4;
-    individualwidthoriginal = ones(1,panels) * (width-2*(panels+1))/panels;
+    heightoriginal = drop - 3*2;
+    individualwidthoriginal = ones(1,panels) * (width-3*2*(panels-1))/panels;
 end
 
 if mean(individualwidthoriginal)>104

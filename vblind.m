@@ -18,11 +18,12 @@ function [] = vblind(individualwidthoriginal,heightoriginal,louver,copy,aluminum
 % location='12 address rd, clayton';frame=0;note='here is a note';
 
 A4attribution;
-%top left(frame) section
+%% ------------------top left(frame) section-------------------------------
 regionxlocation=190; regionylocation=1361.9;
 regionxmax=1032; regionymax=1107.9;
-%rescaling
-leftpadding = regionxmax*0.1; bottompadding = regionymax*0.1; cellpadding = regionxmax*0.01;  %paddings
+%paddings
+leftpadding = regionxmax*0.1; bottompadding = regionymax*0.1; cellpadding = regionxmax*0.01;  
+
 individualwidth = regionxmax/ (sum(individualwidthoriginal)+(length(individualwidthoriginal)+1) * cellpadding) * individualwidthoriginal * 0.8;
 height = regionymax/heightoriginal * heightoriginal * 0.8;
 framexlocations = ones(1,length(individualwidth));
@@ -112,7 +113,7 @@ if copy ~= 1
     text(regionxlocation+regionxmax,regionylocation+regionymax*0.8,strcat({'X '},num2str(copy)),'HorizontalAlignment','Center','VerticalAlignment','Middle','FontWeight','Bold','FontSize',15);
 end
 %--------------end of left(frame) section-------------------------------%
-%top right(Stile A\B) section
+%% top right(Stile A\B) section
 %side bar
 regionxlocation=1222; regionylocation=1361.9;
 regionxmax=688; regionymax=1107.9;
